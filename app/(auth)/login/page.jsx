@@ -39,12 +39,12 @@ export default function LoginPage() {
 
   return (
     <div className='flex flex-col items-center justify-center min-h-screen py-2'>
-      <h1>{loading ? 'Processing' : 'Login'}</h1>
-      <hr />
+      <h1 className='text-4xl'>{loading ? 'Processing' : 'Login'}</h1>
+      <br />
 
       <label htmlFor='email'>email</label>
       <input
-        className='p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black'
+        className='p-2 mb-4 text-black border border-gray-300 rounded-lg focus:outline-none focus:border-gray-600'
         id='email'
         type='text'
         value={user.email}
@@ -53,7 +53,7 @@ export default function LoginPage() {
       />
       <label htmlFor='password'>password</label>
       <input
-        className='p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black'
+        className='p-2 mb-4 text-black border border-gray-300 rounded-lg focus:outline-none focus:border-gray-600'
         id='password'
         type='password'
         value={user.password}
@@ -62,7 +62,7 @@ export default function LoginPage() {
       />
       <button
         onClick={onLogin}
-        className='p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600'>
+        className='p-2 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gray-600'>
         Login here
       </button>
       <Link href='/signup'>Visit Signup page</Link>

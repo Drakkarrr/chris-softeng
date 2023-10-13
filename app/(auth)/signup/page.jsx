@@ -21,7 +21,7 @@ export default function SignupPage() {
       const response = await axios.post('/api/users/signup', user);
       console.log('Signup success', response.data);
       router.push('/login');
-    } catch (error: any) {
+    } catch (error) {
       console.log('Signup failed', error.message);
 
       toast.error(error.message);
@@ -44,11 +44,11 @@ export default function SignupPage() {
 
   return (
     <div className='flex flex-col items-center justify-center min-h-screen py-2'>
-      <h1>{loading ? 'Processing' : 'Signup'}</h1>
-      <hr />
+      <h1 className='text-4xl'>{loading ? 'Processing' : 'Signup'}</h1>
+      <br />
       <label htmlFor='username'>username</label>
       <input
-        className='p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black'
+        className='p-2 mb-4 text-black border border-gray-300 rounded-lg focus:outline-none focus:border-gray-600'
         id='username'
         type='text'
         value={user.username}
@@ -57,7 +57,7 @@ export default function SignupPage() {
       />
       <label htmlFor='email'>email</label>
       <input
-        className='p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black'
+        className='p-2 mb-4 text-black border border-gray-300 rounded-lg focus:outline-none focus:border-gray-600'
         id='email'
         type='text'
         value={user.email}
@@ -66,7 +66,7 @@ export default function SignupPage() {
       />
       <label htmlFor='password'>password</label>
       <input
-        className='p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black'
+        className='p-2 mb-4 text-black border border-gray-300 rounded-lg focus:outline-none focus:border-gray-600'
         id='password'
         type='password'
         value={user.password}
@@ -75,7 +75,7 @@ export default function SignupPage() {
       />
       <button
         onClick={onSignup}
-        className='p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600'>
+        className='p-2 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gray-600'>
         {buttonDisabled ? 'No signup' : 'Signup'}
       </button>
       <Link href='/login'>Visit login page</Link>
