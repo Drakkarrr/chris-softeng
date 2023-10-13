@@ -5,7 +5,7 @@ export default function UserProfile({ params }) {
       <hr />
       <p className='text-4xl'>
         Profile page
-        <span className='p-2 ml-2 text-black bg-orange-500 rounded '>
+        <span className='p-2 ml-2 text-black bg-blue-500 rounded '>
           {params.id}
         </span>
       </p>
