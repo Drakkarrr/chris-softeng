@@ -1,4 +1,5 @@
 'use client';
+
 import Link from 'next/link';
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
@@ -55,6 +56,7 @@ export default function SignupPage() {
         onChange={(e) => setUser({ ...user, username: e.target.value })}
         placeholder='username'
       />
+
       <label htmlFor='email'>email</label>
       <input
         className='p-2 mb-4 text-black border border-gray-300 rounded-lg focus:outline-none focus:border-gray-600'
@@ -64,6 +66,7 @@ export default function SignupPage() {
         onChange={(e) => setUser({ ...user, email: e.target.value })}
         placeholder='email'
       />
+
       <label htmlFor='password'>password</label>
       <input
         className='p-2 mb-4 text-black border border-gray-300 rounded-lg focus:outline-none focus:border-gray-600'
@@ -73,6 +76,7 @@ export default function SignupPage() {
         onChange={(e) => setUser({ ...user, password: e.target.value })}
         placeholder='password'
       />
+
       <button
         onClick={onSignup}
         className='p-2 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:border-gray-600'>
